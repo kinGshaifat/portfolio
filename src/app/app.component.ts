@@ -8,6 +8,15 @@ interface ExperienceItem {
   highlights: string[];
 }
 
+interface SocialLink {
+  platform: string;
+  handle: string;
+  url: string;
+  icon: string;
+  description: string;
+  accent: string;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,6 +30,41 @@ export class AppComponent {
 
   readonly summary =
     'Experienced software engineer with 8+ years delivering scalable web products, leading teams, and building modern Angular applications.';
+
+  readonly socialLinks: SocialLink[] = [
+    {
+      platform: 'LinkedIn',
+      handle: '@alexmorgan-dev',
+      url: 'https://www.linkedin.com/in/alexmorgan-dev',
+      icon: 'in',
+      description: 'Career updates and engineering leadership notes',
+      accent: '#0a66c2'
+    },
+    {
+      platform: 'GitHub',
+      handle: '@alexmorgan',
+      url: 'https://github.com/alexmorgan',
+      icon: '{}',
+      description: 'Open-source projects and Angular experiments',
+      accent: '#24292f'
+    },
+    {
+      platform: 'X / Twitter',
+      handle: '@alexbuilds',
+      url: 'https://x.com/alexbuilds',
+      icon: '𝕏',
+      description: 'Short posts on frontend architecture and product craft',
+      accent: '#111827'
+    },
+    {
+      platform: 'Email',
+      handle: 'hello@alexmorgan.dev',
+      url: 'mailto:hello@alexmorgan.dev',
+      icon: '@',
+      description: 'Best place for project inquiries and collaborations',
+      accent: '#db2777'
+    }
+  ];
 
   readonly skills = [
     'Angular',
